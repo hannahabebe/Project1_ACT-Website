@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
+/*To remove the default margin and padding*/
+*{
+  padding: 0;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ li {
+  list-style: none;
+ }
+
+.home{
+  background-image:
+  linear-gradient(rgba(89, 161, 234, 0.5), rgba(89, 161, 234, 0.5)),
+  url('Bg1.png');
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  border: 1px #59A1EA dashed;
+}
+
+.navbar {  
+  display: flex;
+  background-color: whitesmoke;
+  width: 1100px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 15px;
+}
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  align-items: center;
+}
+.menu a{
+  text-decoration: none;
+  padding: 0 10px 0 0px;
+  color: gray;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.droplink {
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 255, 234, 0.9);
+  width: 250px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+.droplink a {
+  display: flex; 
+  color: gray;
+  padding: 10px ;
+  text-decoration: none;
+}
+.dropbtn {
+  background-color: white;
+  color: #59A1EA;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.droplink a:hover {background-color: rgb(89, 161, 234, 0.5)}
+.dropdown:hover .droplink {display: block;}
+.dropdown:hover .dropbtn {background-color: rgb(4, 87, 114);}
+
+.wrapper{
+  width: 1000px;
+  margin: auto;
+  margin-top: 70px;
+}
+.intro-wrapper{
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+.intro-wrapper h3{
+  width: 600px;
+  margin: 20px auto;
+}
+.typewriter {
+  animation: typing;
+  display: inline-flex;
+}
+.typewriter{
+  display: inline-flex;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  animation: typing 10s steps(29) infinite;
+  animation-direction: alternate; 
+  animation-delay: 0s;
+  border-right: 3px solid white;
+}
+@keyframes typing {
+  0%{width: 0;}
+  20% {width: 73%;}
+  100%{width: 0;}
+}
+button {
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+}
+.btn a{
+  color: #59A1EA;
+  text-decoration: none;
+}
+
+.main-container{
+  background: rgba(245, 245, 245, 0.97);
+  color: #fff;;
+  width: 1360px;
+  border-radius: 16px;
+  margin: -70px auto;
+  padding: 70px;
+}
+
+.first-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    'left-column right-column';
+  margin-top: 10px;
+  margin-left: 45px;
+}
+.left-column{
+  grid-area: left-column;
+  margin-top: 70px;
+}
+.right-column{
+  grid-area: right-column;
+  padding-left: 150px;
+  /* border: 1px dashed black; */
+}
+.flip-card {
+  /* background-color: transparent; */
+  width: 400px;
+  height: 450px;
+  /* perspective: 1000px; */
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-inner h2{
+  padding: 110px 20px 25px 15px; 
+  margin: 0 0 8px; 
+  font-size: 30px;
+  font-weight: bolder;
+}
+.flip-card-inner p{
+  padding: 0 20px 0 20px; 
+  margin: 0 0 16px; 
+  font-size: 16px;
+  line-height: 25px;
+} 
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: #59A1EA;
+  color: white;
+  border-radius: 15px;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  /* min-width: 160px; */
+  /* box-shadow: 0px 8px 16px 0px rgba(89,161,234,0.5); */
+  /* z-index: 1; */
+}
+.dropdown-content a {
+  color: #59A1EA;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: rgb(4, 87, 114)}
+.dropdown:hover .dropdown-content {display: block;}
+
+.second-wrapper{
+  /* border: 2px solid red; */
+  background-color: rgb(223, 227, 232);
+  color: #59A1EA;
+  margin: 70px auto;
+  padding: 50px;
+}
+.inner-wrapper{
+  display: flex;
+  justify-content: space-between;
+  padding:50px 50px 10px 50px;
+}
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  max-height: 650px;
+  /* margin: auto; */
+  /* text-align:center; */
+  border-radius: 10px;
+}
+.card img{
+  height: 50%;
+  border-radius: 10px 10px 0 0;
+}
+.card a{
+  color: #59A1EA;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  padding: 20px;
+}
+.card p{
+  color: #97b0c9;
+  padding: 5px 20px 0 20px;
+  line-height: 25px;
+}
+.events a{
+  color: #59A1EA;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.events hr{
+  margin: 20px;
+  width: 100%;
+  background-color: #59A1EA;
+}
+.third-wrapper{
+  /* border: 2px solid red; */
+  color: #59A1EA;
+  text-align: center;
+  font-size: 20px;
+  line-height: 60px;
+  padding: 0 150px;
+}
+#row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  /* border: 2px solid yellow; */
+}
+
+/* Create four equal columns that sits next to each other */
+#column {
+  margin: 0 auto;
+  max-width: 20%;
+  padding: 10px;
+}
+#column img {
+  width: 100%;
+  height: 70%;
+  vertical-align: middle;
+}
+
+.fourth-wrapper{
+  /* border: 2px solid red; */
+  color: #59A1EA;
+  /* margin-bottom: 20px; */
+}
+.row{
+  display: flex;
+  /* border: 1px solid green; */
+}
+.row h3{
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.row p{
+  line-height: 20px;
+  color: #a8bcd2;
+}
+.column {
+  width: 50%;
+  padding: 20px;
+  /* border: 1px solid red; */
+}
+.column img{
+  /* border: 1px dashed black; */
+  width: 100%;
+  min-height: 175px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(81, 161, 234, 0.5);
+}
+.index-footer{
+  margin: 120px 50px 0 50px;
+}
+.index-footer h6{
+  color: #59A1EA;
+  font-size: 16px;
+  margin: 0 0 24px;
+}
+.index-footer a{
+  color: #97b0c9;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 25px;
+  padding: 0 16px 4px;
+}
+.index-footer .row p{
+  color: #59A1EA;
+  margin: 24px auto;
+}
+
+
+/* My ACT Page */
+/* HEADER */
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #59A1EA;
+}
+ul.topnav li {float: left;}
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.topnav li a:hover:not(.active) {color: rgb(81, 61, 234, 0.5);}
+ul.topnav li a.active {background-color: rgb(81, 61, 234, 0.5);}
+
+/* MAIN */
+.act-wrapper{
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-areas: 
+    'left-column right-column';
+}
+.act-wrapper .left-column, .act-wrapper .right-column{
+  margin: 0px;
+  padding: 0;
+}
+.sidebar{
+  display: block;
+  /* border: 4px dashed black; */
+}
+.login-block{
+  /* position: relative; */
+  border-radius: 10px;
+  margin: 25px;
+  padding: 30px 0 30px 0;
+  border: 2px solid #59A1EA;
+}
+/* style inputs and link buttons */
+input{
+  padding: 6px 12px;
+  border: 1px solid #59A1EA;
+  border-radius: 4px;
+  margin: 15px 40px;
+  display: block;
+  font-size: 17px;
+}
+/* style the submit button */
+input[type=submit] {
+  padding: 6px 110px;
+  background-color: #59A1EA;
+  margin: 0 auto;
+  color: white;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: rgb(81, 161, 234, 0.5);
+}
+.login-block a{
+  text-decoration: none;
+  color: #59A1EA;
+  display: block;
+  padding: 15px 10px 5px 45px;
+}
+.notice-block{
+  border-radius: 10px;
+  margin: 25px;
+  border: 2px solid #59A1EA;
+}
+.panel-heading{
+  margin-left: -3px;
+  margin-right: -2px;
+  padding: 10px;
+  color: white;
+  background-color: rgb(81, 161, 234, 0.9);
+  border-radius: 7px 7px 0 0;
+}
+.panel-body{
+  padding: 15px;
+  line-height: 25px;
+  font-size: 17px;
+}
+.hot-courses{
+  margin-top: 10px;
+}
+.hot-courses h4{
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  color: #59A1EA;
+}
+.hot-courses hr{
+  margin: auto;
+  border: 0;
+  width: 70%;
+  height: 1.5px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(81, 161, 234), rgba(0, 0, 0, 0));
+}
+.box {
+  display: inline-block;
+  width: 20%;
+  margin: 15px;
+  margin-left: 29px;
+  position:relative;
+  box-shadow: 0 4px 8px 0 rgba(81, 161, 234, 0.5);
+}
+.ribbon{
+  --f: 10px; /* control the folded part*/
+  --r: 0px; /* control the ribbon shape */
+  --t: 15px; /* the top offset */
+  position: absolute;
+  margin-top: 110px;
+  inset: var(--t) calc(-1*var(--f)) auto auto;
+  padding: 12px 6px var(--f) calc(10px + var(--r));
+  clip-path: 
+    polygon(0 0,100% 0,100% calc(100% - var(--f)),calc(100% - var(--f)) 100%,
+    calc(100% - var(--f)) calc(100% - var(--f)),0 calc(100% - var(--f)),
+    var(--r) calc(50% - var(--f)/2));
+  color: white;
+  background: #59A1EA;
+  box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+}
+.description{
+  line-height: 20px;
+  margin: 10px;
+}
+.description a{
+  text-decoration: none;
+  display: block;
+  color: #59A1EA;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.checked {
+  color: orange;
+  padding-bottom: 15px;
+}
+.sw-name{
+  background-color: rgb(81, 161, 234, 0.7);
+  padding: 17px;
+  color: white;
+  text-align: right;
+}
+.sw-name a{
+  text-decoration: none;
+  color: white;
+}
+/* Responsive Topnav for MyACT Page */
+@media screen and (max-width: 600px) {
+  ul.topnav li {float: none;}
+}
